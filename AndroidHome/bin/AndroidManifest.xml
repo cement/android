@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cement.android"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23"
+        android:maxSdkVersion="23" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+  
+    <uses-permission android:name="android.permission.SENSOR_INFO" />  
+    <uses-permission android:name="android.permission.SENSOR_ENABLE" />  
+    <uses-permission android:name="android.permission.VIBRATE" />  
+    <uses-permission android:name="android.permission.INTERNET" />  
+   
+    <application
+        android:name="com.cement.app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cement.app.StartupActivity"
+            android:label="启动更多" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+             <intent-filter>
+                <action android:name="com.cement.action.Test" />
+                <category android:name="com.cement.category.Test" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.graphics.DrawBoardActivity"
+            android:launchMode="singleTask"
+            android:label="儿童画板" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.gl.aster.solar.SolarSystemActivity"
+            android:launchMode="singleTask"
+            android:label="太阳系遨游" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.gl.aster.earth.EarthSystemActivity"
+            android:launchMode="singleTask"
+            android:label="地月遨游" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.gl.kube.KubeActivity"
+            android:label="迷你魔方" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.surfaceview.WindowSurface"
+            android:label="魔幻直线" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.install.InstallApkActivity"
+            android:label="安装应用" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.sensor.SensorRotationActivity"
+            android:label="智能感应" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.animation.MultiAnimationActivity"
+            android:label="属性动画" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.ssl.server.KeyChainActivity"
+            android:label="安全服务器" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.rs.HelloRSActivity"
+            android:label="脚本渲染" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.gesture.recognition.GestureRecognitionActivity"
+            android:label="手势识别" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cement.TEST" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cement.gesture.recognition.GestureBuilderActivity"
+            android:label="手势识别" >
+        </activity>
+        <activity
+            android:name="com.cement.gesture.recognition.GestureStoreActivity"
+            android:label="手势识别" >
+        </activity>
+        
+        <service android:name="com.cement.ssl.server.SecureWebServerService">
+            
+        </service>
+    </application>
+
+</manifest>
